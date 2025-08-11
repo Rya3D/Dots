@@ -1,0 +1,18 @@
+[global]
+monitor = 1
+frame_width = 0
+font = Agave Nerd Font 10
+background = "#00000060"
+foreground = "#ffffffff"
+corner_radius = 20
+progress_bar_corner_radius = 5
+offset = (15, 25)
+width = (300, 600)
+height = (100, 200)
+gap_size = 5
+format = "<b>%s</b>\n%b"
+
+icon_corner_radius = 10
+
+min_icon_size = 64
+max_icon_size = 128

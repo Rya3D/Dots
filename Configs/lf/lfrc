@@ -1,0 +1,88 @@
+# Leave these Alone
+set shell sh
+set shellopts '-eu'
+set ifs "\n"
+set scrolloff 10
+set cursorpreviewfmt "\033[7;2m"
+set hiddenfiles true
+set icons true
+
+# UNMAP
+map w
+map i
+map r
+map t
+map y
+map i
+map p
+map o
+map d
+map c
+map b mark-load
+
+# execute current file (must be executable)
+map <enter> $$f
+map <enter> !$f
+
+# Custom Open command that doesnt fuck up
+cmd open &{{
+    case $(file --mime-type -Lb $f) in
+        text/*) lf -remote "send $id \$$EDITOR \$fx";;
+        *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
+    esac
+}}
+
+# use enter for shell commands
+map <c-e> shell
+
+# show the result of execution of previous commands
+map ` !true
+
+# mkdir command. See wiki if you want it to select created dir
+map a :push %mkdir<space>
+map A :push %touch<space>
+
+map <c-c> copy
+map <c-v> paste
+map <c-x> cut
+map <a-c> clear
+
+# define a custom 'rename' command without prompt for overwrite
+cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
+map R push :rename<space>
+
+# Select Files
+map S :toggle
+
+# make sure trash folder exists
+%mkdir -p ~/.trash
+
+# move current file or selected files to trash folder
+cmd trash %set -f; mv -t ~/.trash $fx
+
+map <delete> trash
+map <c-delete> delete
+
+# extract the current file with the right command
+# (xkcd link: https://xkcd.com/1168/)
+cmd extract &{{
+    set -f
+    case $f in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+        *.tar.gz|*.tgz) tar xzvf $f;;
+        *.tar.xz|*.txz) tar xJvf $f;;
+        *.zip) unzip $f;;
+        *.rar) unrar x $f;;
+        *.7z) 7z x $f;;
+    esac
+}}
+
+map E extract
+
+# compress current file or selected files with zip
+cmd zip &{{
+	set -f
+    zip -r $f.zip $f
+}}
+
+map Z zip
