@@ -12,7 +12,7 @@ https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fed
 sudo dnf install \
 https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-sudo dnf install alacritty micro hyprland hypridle hyprpapr fuzzel waybar flatpak mpv golang steam
+sudo dnf install alacritty micro hyprland hypridle hyprpapr fuzzel waybar flatpak mpv golang steam kvantum
 
 git clone https://github.com/Rya3D/Dots.git
 
