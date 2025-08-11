@@ -1,0 +1,1 @@
+In hurt we find strength

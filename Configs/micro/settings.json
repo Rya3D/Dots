@@ -1,0 +1,11 @@
+{
+    "colorscheme": "simple",
+    "divchars": "┃━",
+    "divreverse": false,
+    "lsp.autocompleteDetails": true,
+    "lsp.ignoreMessages": "LS message1 to ignore|LS message 2 to ignore|...",
+    "lsp.ignoreTriggerCharacters": "completion,signature",
+    "lsp.server": "go=gopls",
+    "softwrap": true,
+    "wordwrap": true
+}
