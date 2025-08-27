@@ -9,4 +9,10 @@
     "F6": "command-edit:gorename ",
     "Alt-MouseLeft":   "MouseMultiCursor",
     "Ctrl-MouseLeft":   "RemoveMultiCursor",
+    "CtrlUp": "ParagraphPrevious",
+    "CtrlDown": "ParagraphNext",
+    "CtrlShiftUp": "SelectToParagraphPrevious",
+    "CtrlShiftDown": "SelectToParagraphNext",
+    "AltUp": "CursorStart",
+    "AltDown": "CursorEnd",
 }
