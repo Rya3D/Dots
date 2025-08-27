@@ -2,10 +2,14 @@
     "colorscheme": "simple",
     "divchars": "┃━",
     "divreverse": false,
+    "hlsearch": true,
     "lsp.autocompleteDetails": true,
     "lsp.ignoreMessages": "LS message1 to ignore|LS message 2 to ignore|...",
     "lsp.ignoreTriggerCharacters": "completion,signature",
     "lsp.server": "go=gopls",
+    "matchbracestyle": "highlight",
+    "paste": true,
+    "scrollspeed": 1,
     "softwrap": true,
     "wordwrap": true
 }
