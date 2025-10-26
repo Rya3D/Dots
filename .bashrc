@@ -26,8 +26,6 @@ unset rc
 
 export EDITOR=micro
 
-alias tft='waydroid show-full-ui'
-
 alias go-win='CGO_ENABLED=1 CC=x86_64-w64-mingw32-gcc GOOS=windows GOARCH=amd64 go build -ldflags "-s -w"'
 
 alias raylib='go get -v -u github.com/gen2brain/raylib-go/raylib'
